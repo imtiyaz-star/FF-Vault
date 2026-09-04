@@ -114,7 +114,7 @@ const collections = {
         small: "OG EMOTE COLLECTION",
 
         items: [
-            ["LOL EMOTE", "images/LOL-1.PNG", "OG", "₹200"],
+            ["LOL EMOTE", "images/LOL-1.png", "OG", "₹200"],
             ["DEVIL MOVE", "images/DEVIL-M.jpg", "RARE", "₹200"],
             ["ROSE EMOTE", "images/ROSE-E.jpg", "EPIC", "₹100"],
             ["PIRATE FLAG", "images/PIRATE-S.jpg", "OG", "₹100"],
