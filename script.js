@@ -17,7 +17,7 @@ const collections = {
             ["Galaxy Dino", "images/galaxy-dino.jpg", "ULTRA RARE", "₹150"],
             ["HipHop Bundle", "images/hiphop.jpg", "OG", "₹200"],
             ["Old Bundle", "images/old-b.png", "RARE", "₹150"],
-            ["Sakura Bundle", "images/sakura.jpg", "HIGH DEMAND", "₹150"]
+            ["Sakura Bundle", "images/sakura.jpg", "HIGH DEMAND", "₹200"]
         ]
     },
 
