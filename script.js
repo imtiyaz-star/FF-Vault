@@ -124,7 +124,7 @@ const collections = {
             ["PUSH-UP EMOTE", "images/PUSH-UP.png", "OG", "₹80"],
             ["HIGH FIVE", "images/high-five.png", "OG", "₹70"],
             ["MONEY GUN", "images/money-m.png", "RARE", "₹100"],
-            ["SELFIE", "images/SELFIE-CL.png", "EPIC", "₹60"],
+            ["SELFIE", "images/SELFIE-CL.png", "EPIC", "₹80"],
             ["PUSHPA RAAJ", "images/pushpa-raaj.png", "RARE", "₹100"],
             ["MUMMY DANCE", "images/MUMMY-D.png", "OG", "₹80"],
             ["CHAIR EMOTE", "images/sitting-chair.png", "OG", "₹80"]
