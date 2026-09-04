@@ -85,11 +85,8 @@ app.get("/", (req, res) => {
    ADMIN DETAILS
 ========================= */
 
-const ADMIN_USER =
-    process.env.ADMIN_USER;
-
-const ADMIN_PASSWORD =
-    process.env.ADMIN_PASSWORD;
+const ADMIN_USER = process.env.ADMIN_USER || "admin";
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "9594078817";
 
 
 /* =========================
