@@ -143,9 +143,9 @@ const collections = {
             ["TORNADO", "images/tornado.png", "OG", "₹150"],
             ["OVER-CHARGE", "images/over-charge.png", "RARE", "₹150"],
             ["DRAGON RIDE", "images/dragon-ride.png", "EPIC", "₹150"],
-            ["HORSE RIDE", "images/horse-ride.png", "OG", "₹100"],
-            ["WOLF ZAP", "images/wolf-zap.png", "RARE", "₹100"],
-            ["CARPET", "images/carpet-entry.png", "EPIC", "₹100"],
+            ["HORSE RIDE", "images/horse-ride.png", "OG", "₹150"],
+            ["WOLF ZAP", "images/wolf-zap.png", "RARE", "₹150"],
+            ["CARPET", "images/carpet-entry.png", "EPIC", "₹200"],
             ["ENTRY EMOTE", "images/entry-bike.png", "OG", "₹150"]
         ]
     },
