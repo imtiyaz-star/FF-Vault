@@ -87,7 +87,7 @@ const collections = {
             ["Thompson Lucky Koi", "images/thompson.png", "RARE", "₹70"],
 
             ["M1014 Underground Howl", "images/m1014-n.png", "LEGENDARY", "₹100"],
-            ["M1887", "images/m1887.png", "LEGENDARY", "₹69"],
+            ["M1887", "images/m1887.png", "LEGENDARY", "₹100"],
             ["MAG-7", "images/mag7.png", "EPIC", "₹69"],
             ["SPAS12", "images/spas12.png", "RARE", "₹69"],
 
