@@ -16,7 +16,7 @@ const collections = {
             ["Bunny Warrior", "images/bunny-warrior.jpg", "RARE", "₹150"],
             ["Galaxy Dino", "images/galaxy-dino.jpg", "ULTRA RARE", "₹150"],
             ["HipHop Bundle", "images/hiphop.jpg", "OG", "₹200"],
-            ["Old Bundle", "images/old-b.png", "RARE", "₹100"],
+            ["Old Bundle", "images/old-b.png", "RARE", "₹150"],
             ["Sakura Bundle", "images/sakura.jpg", "HIGH DEMAND", "₹150"]
         ]
     },
@@ -34,7 +34,7 @@ const collections = {
             ["Green Criminal", "images/criminal-g.jpg", "ULTRA RARE", "₹150"],
             ["Purple Criminal", "images/criminal-p.jpg", "ULTRA RARE", "₹200"],
             ["Yellow Criminal", "images/criminal-y.jpg", "ULTRA RARE", "₹150"],
-            ["Black Criminal", "images/criminal-l.jpg", "OG", "₹150"]
+            ["Black Criminal", "images/criminal-l.jpg", "OG", "₹200"]
         ]
     },
 
