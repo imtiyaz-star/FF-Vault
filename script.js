@@ -11,12 +11,12 @@ const collections = {
         items: [
             ["Arctic Blue Bundle", "images/arctic-blue.jpg", "ULTRA RARE", "₹80"],
             ["Zombie Samurai", "images/zombie-samurai.jpg", "RARE", "₹100"],
-            ["Knight Clown", "images/knight-clown.jpg", "ULTRA RARE", "₹50"],
-            ["Angelic Bundle", "images/angelic.jpg", "HIGH DEMAND", "₹50"],
-            ["Bunny Warrior", "images/bunny-warrior.jpg", "RARE", "₹80"],
+            ["Knight Clown", "images/knight-clown.jpg", "ULTRA RARE", "₹150"],
+            ["Angelic Bundle", "images/angelic.jpg", "HIGH DEMAND", "₹150"],
+            ["Bunny Warrior", "images/bunny-warrior.jpg", "RARE", "₹150"],
             ["Galaxy Dino", "images/galaxy-dino.jpg", "ULTRA RARE", "₹80"],
-            ["HipHop Bundle", "images/hiphop.jpg", "OG", "₹99"],
-            ["Old Bundle", "images/old-b.png", "RARE", "₹80"],
+            ["HipHop Bundle", "images/hiphop.jpg", "OG", "₹200"],
+            ["Old Bundle", "images/old-b.png", "RARE", "₹100"],
             ["Sakura Bundle", "images/sakura.jpg", "HIGH DEMAND", "₹150"]
         ]
     },
@@ -91,7 +91,7 @@ const collections = {
             ["MAG-7", "images/mag7.png", "EPIC", "₹60"],
             ["SPAS12", "images/spas12.png", "RARE", "₹69"],
 
-            ["AWM Old Fashion", "images/awm.png", "LEGENDARY", "₹80"],
+            ["AWM Old Fashion", "images/awm.png", "LEGENDARY", "₹100"],
             ["Kar98k Great Plunder", "images/kar98.png", "EPIC", "₹90"],
             ["M82B Dragon Mob", "images/m82b.png", "RARE", "₹80"],
             ["SVD Swordsman Legends", "images/svd.png", "EPIC", "₹90"],
