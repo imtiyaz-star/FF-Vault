@@ -9,12 +9,12 @@ const collections = {
         small: "ULTRA RARE COLLECTION",
 
         items: [
-            ["Arctic Blue Bundle", "images/arctic-blue.jpg", "ULTRA RARE", "₹80"],
-            ["Zombie Samurai", "images/zombie-samurai.jpg", "RARE", "₹100"],
+            ["Arctic Blue Bundle", "images/arctic-blue.jpg", "ULTRA RARE", "₹150"],
+            ["Zombie Samurai", "images/zombie-samurai.jpg", "RARE", "₹150"],
             ["Knight Clown", "images/knight-clown.jpg", "ULTRA RARE", "₹150"],
             ["Angelic Bundle", "images/angelic.jpg", "HIGH DEMAND", "₹150"],
             ["Bunny Warrior", "images/bunny-warrior.jpg", "RARE", "₹150"],
-            ["Galaxy Dino", "images/galaxy-dino.jpg", "ULTRA RARE", "₹80"],
+            ["Galaxy Dino", "images/galaxy-dino.jpg", "ULTRA RARE", "₹150"],
             ["HipHop Bundle", "images/hiphop.jpg", "OG", "₹200"],
             ["Old Bundle", "images/old-b.png", "RARE", "₹100"],
             ["Sakura Bundle", "images/sakura.jpg", "HIGH DEMAND", "₹150"]
@@ -48,7 +48,7 @@ const collections = {
         items: [
             ["Galaxy Dino", "images/galaxy-dino.jpg", "ULTRA RARE", "₹100"],
             ["Green Dino", "images/dino-green.jpg", "RARE", "₹150"],
-            ["Blue Dino", "images/dino-blue.jpg", "RARE", "₹80"],
+            ["Blue Dino", "images/dino-blue.jpg", "RARE", "₹100"],
             ["Pink Dino", "images/dino-pink.jpg", "RARE", "₹100"],
             ["Yellow Dino", "images/dino-yellow.jpg", "RARE", "₹200"]
         ]
@@ -72,11 +72,11 @@ const collections = {
             ["P90 EVO Gun", "images/p90-e.png", "EVO", "₹100"],
             ["UMP EVO Gun", "images/ump-e.png", "EVO", "₹90"],
 
-            ["AK47 Rare Skin", "images/ak47p.png", "LEGENDARY", "₹60"],
-            ["M4A1 Rare Skin", "images/m4a1.png", "LEGENDARY", "₹69"],
-            ["SCAR Old Fashion", "images/scar.png", "EPIC", "₹60"],
+            ["AK47 Rare Skin", "images/ak47p.png", "LEGENDARY", "₹70"],
+            ["M4A1 Rare Skin", "images/m4a1.png", "LEGENDARY", "₹70"],
+            ["SCAR Old Fashion", "images/scar.png", "EPIC", "₹69"],
             ["XM8 Livey Beast", "images/xm8.png", "EPIC", "₹70"],
-            ["AN94 BOOYAH", "images/an94.png", "RARE", "₹60"],
+            ["AN94 BOOYAH", "images/an94.png", "RARE", "₹70"],
             ["Groza Heartseeker", "images/groza.png", "LEGENDARY", "₹80"],
 
             ["PARAFAL Sickly Sweet", "images/parafal.png", "RARE", "₹80"],
@@ -84,11 +84,11 @@ const collections = {
             ["MP5 Old Fashion", "images/mp5.png", "EPIC", "₹80"],
             ["UMP Lively Beast", "images/ump.png", "EPIC", "₹70"],
             ["P90 Old Fashin", "images/p90.png", "RARE", "₹80"],
-            ["Thompson Lucky Koi", "images/thompson.png", "RARE", "₹60"],
+            ["Thompson Lucky Koi", "images/thompson.png", "RARE", "₹70"],
 
             ["M1014 Underground Howl", "images/m1014-n.png", "LEGENDARY", "₹100"],
-            ["M1887", "images/m1887.png", "LEGENDARY", "₹60"],
-            ["MAG-7", "images/mag7.png", "EPIC", "₹60"],
+            ["M1887", "images/m1887.png", "LEGENDARY", "₹69"],
+            ["MAG-7", "images/mag7.png", "EPIC", "₹69"],
             ["SPAS12", "images/spas12.png", "RARE", "₹69"],
 
             ["AWM Old Fashion", "images/awm.png", "LEGENDARY", "₹100"],
@@ -97,7 +97,7 @@ const collections = {
             ["SVD Swordsman Legends", "images/svd.png", "EPIC", "₹90"],
 
             ["M249 Fire Bones", "images/m249.png", "EPIC", "₹99"],
-            ["AC80", "images/ac80.png", "EPIC", "₹60"],
+            ["AC80", "images/ac80.png", "EPIC", "₹80"],
             ["M60 Lively Beast", "images/m60.png", "RARE", "₹70"],
 
             ["Desert Eagle Ornamenal Touch", "images/desert.png", "EPIC", "₹60"],
@@ -177,10 +177,10 @@ const collections = {
         small: "GRENADE COLLECTION",
 
         items: [
-            ["Explosive Brick", "images/explo-sive.png", "RARE", "₹59"],
-            ["Pumpkin Bomb", "images/pump-kin.png", "EPIC", "₹59"],
-            ["Pineapple Fizz", "images/pine-apple.png", "RARE", "₹59"],
-            ["Egg Grenade", "images/e-gg.png", "EPIC", "₹59"]
+            ["Explosive Brick", "images/explo-sive.png", "RARE", "₹80"],
+            ["Pumpkin Bomb", "images/pump-kin.png", "EPIC", "₹69"],
+            ["Pineapple Fizz", "images/pine-apple.png", "RARE", "₹69"],
+            ["Egg Grenade", "images/e-gg.png", "EPIC", "₹69"]
         ]
     },
 
