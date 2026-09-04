@@ -29,11 +29,11 @@ const collections = {
         small: "CRIMINAL COLLECTION",
 
         items: [
-            ["Red Criminal", "images/criminal-r.jpg", "ULTRA RARE", "₹100"],
+            ["Red Criminal", "images/criminal-r.jpg", "ULTRA RARE", "₹200"],
             ["Blue Criminal", "images/criminal-b.jpg", "ULTRA RARE", "₹150"],
-            ["Green Criminal", "images/criminal-g.jpg", "ULTRA RARE", "₹100"],
-            ["Purple Criminal", "images/criminal-p.jpg", "ULTRA RARE", "₹100"],
-            ["Yellow Criminal", "images/criminal-y.jpg", "ULTRA RARE", "₹100"],
+            ["Green Criminal", "images/criminal-g.jpg", "ULTRA RARE", "₹150"],
+            ["Purple Criminal", "images/criminal-p.jpg", "ULTRA RARE", "₹200"],
+            ["Yellow Criminal", "images/criminal-y.jpg", "ULTRA RARE", "₹150"],
             ["Black Criminal", "images/criminal-l.jpg", "OG", "₹150"]
         ]
     },
@@ -159,13 +159,13 @@ const collections = {
 
         items: [
             ["AZURE Dragon Gloo Wall", "images/azure-gloo.png", "LEGENDARY", "₹90"],
-            ["Cobra Gloo Wall", "images/cobra.png", "EPIC", "₹60"],
-            ["ROARING PROTECTOR", "images/roar-ing.png", "RARE", "₹60"],
-            ["Demon SLAYER", "images/demon-slayer.png", "EPIC", "₹50"],
-            ["MINI GLOO WALL", "images/mini-wall.png", "OG", "₹50"],
-            ["SPIRIT GLOO WALL", "images/black-wall.png", "RARE", "₹60"],
-            ["NUTTY QUIRK", "images/nutty-quirk.png", "EPIC", "₹50"],
-            ["DRAGON SHIELD", "images/dra-gon.png", "RARE", "₹50"]
+            ["Cobra Gloo Wall", "images/cobra.png", "EPIC", "₹80"],
+            ["ROARING PROTECTOR", "images/roar-ing.png", "RARE", "₹70"],
+            ["Demon SLAYER", "images/demon-slayer.png", "EPIC", "₹70"],
+            ["MINI GLOO WALL", "images/mini-wall.png", "OG", "₹70"],
+            ["SPIRIT GLOO WALL", "images/black-wall.png", "RARE", "₹70"],
+            ["NUTTY QUIRK", "images/nutty-quirk.png", "EPIC", "₹70"],
+            ["DRAGON SHIELD", "images/dra-gon.png", "RARE", "₹70"]
         ]
     },
 
