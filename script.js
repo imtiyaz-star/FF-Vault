@@ -286,7 +286,7 @@ function openCategory(category) {
 
                 <button
                     class="buy-btn"
-                    onclick="openBuyForm(
+                    onclick="openCheckout(
                         '${item[0].replace(/'/g, "\\'")}',
                         '${item[3]}'
                     )"
@@ -486,6 +486,64 @@ document
         }
     );
 
+/* =========================
+   CHECKOUT
+========================= */
+
+let checkoutItem = "";
+let checkoutPrice = "";
+
+
+/* OPEN CHECKOUT */
+
+function openCheckout(item, price) {
+
+    checkoutItem = item;
+    checkoutPrice = price;
+
+    document
+        .getElementById("checkoutItem")
+        .textContent = item;
+
+    document
+        .getElementById("checkoutPrice")
+        .textContent = price;
+
+    document
+        .getElementById("checkoutTotal")
+        .textContent = price;
+
+    document
+        .getElementById("checkoutModal")
+        .classList
+        .remove("hidden");
+}
+
+
+/* CLOSE CHECKOUT */
+
+function closeCheckout() {
+
+    document
+        .getElementById("checkoutModal")
+        .classList
+        .add("hidden");
+}
+
+
+/* CONTINUE CHECKOUT */
+
+function continueCheckout() {
+
+    closeCheckout();
+
+    /* Existing buy form open hoga */
+
+    openBuyForm(
+        checkoutItem,
+        checkoutPrice
+    );
+}
 
 /* =========================
    2 MINUTE TIMER
