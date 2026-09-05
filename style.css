@@ -2020,14 +2020,13 @@ footer p {
 }
 
 /* =========================
-   CHECKOUT MODAL
+   PAYMENT QR MODAL
 ========================= */
 
-.checkout-modal {
+.payment-modal {
     position: fixed;
     inset: 0;
-
-    z-index: 5500;
+    z-index: 99999;
 
     display: flex;
     align-items: center;
@@ -2035,128 +2034,156 @@ footer p {
 
     padding: 20px;
 
-    background: rgba(0, 0, 0, .85);
+    background: rgba(0, 0, 0, 0.88);
     backdrop-filter: blur(10px);
 }
 
-.checkout-box {
-    position: relative;
-
-    width: min(460px, 100%);
-
-    padding: 32px;
-
-    border: 1px solid #333;
-    border-radius: 18px;
-
-    background: #141414;
-
-    box-shadow:
-        0 0 20px rgba(255,216,61,.15),
-        0 30px 100px rgba(0,0,0,.8);
-
-    animation: modalIn .3s ease;
+.payment-modal.hidden {
+    display: none;
 }
 
-.close-checkout {
-    position: absolute;
+.payment-box {
+    position: relative;
 
-    top: 12px;
-    right: 16px;
+    width: min(430px, 100%);
+    padding: 30px;
+
+    background: #141414;
+    border: 1px solid #333;
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 25px rgba(255, 216, 61, 0.18),
+        0 30px 100px rgba(0, 0, 0, 0.9);
+
+    animation: modalIn 0.3s ease;
+}
+
+.payment-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
 
     border: 0;
-
     background: transparent;
-    color: #999;
 
+    color: #888;
     font-size: 30px;
 
     cursor: pointer;
 }
 
-.close-checkout:hover {
+.payment-close:hover {
     color: #fff;
 }
 
-.checkout-label {
+.payment-label {
     color: #ffd83d;
-
     font-size: 11px;
     font-weight: 900;
     letter-spacing: 3px;
 }
 
-.checkout-box h2 {
-    margin: 8px 0 25px;
-
-    font-size: 27px;
+.payment-box h2 {
+    margin: 8px 0 22px;
+    color: #fff;
+    font-size: 26px;
 }
 
-.checkout-row {
+.payment-item {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 15px;
 
-    padding: 16px 0;
+    padding: 14px 0;
 
     border-bottom: 1px solid #292929;
 
     color: #aaa;
 }
 
-.checkout-row strong {
+.payment-item strong {
     color: #fff;
-    text-align: right;
 }
 
-.checkout-total {
+.payment-amount {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    margin-top: 20px;
-    padding: 18px;
+    margin-top: 18px;
+    padding: 16px;
 
-    border: 1px solid rgba(255,216,61,.35);
+    border: 1px solid rgba(255, 216, 61, 0.4);
     border-radius: 12px;
 
-    background: rgba(255,216,61,.06);
+    background: rgba(255, 216, 61, 0.06);
 }
 
-.checkout-total span {
+.payment-amount span {
     color: #ffd83d;
-
     font-size: 12px;
     font-weight: 900;
-
-    letter-spacing: 1px;
 }
 
-.checkout-total strong {
+.payment-amount strong {
     color: #ffd83d;
-
     font-size: 28px;
-    font-weight: 900;
 }
 
-.locked-price {
-    margin-top: 15px;
+.qr-wrapper {
+    width: 230px;
+    height: 230px;
+
+    margin: 22px auto 12px;
+
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+    border-radius: 12px;
+}
+
+#paymentQR {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#paymentQR img {
+    display: block;
+    width: 210px;
+    height: 210px;
+}
+
+.scan-text {
+    margin: 12px 0 5px;
+
+    color: #ddd;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.amount-note {
+    margin: 0;
 
     color: #888;
-
-    font-size: 12px;
-
-    text-align: center;
+    font-size: 11px;
 }
 
-.checkout-btn {
+.payment-continue {
     width: 100%;
 
-    margin-top: 22px;
+    margin-top: 20px;
     padding: 15px;
 
     border: 0;
-    border-radius: 8px;
+    border-radius: 9px;
 
     background: #ffd83d;
     color: #111;
@@ -2165,14 +2192,12 @@ footer p {
     font-weight: 900;
 
     cursor: pointer;
-
-    transition: .25s ease;
 }
 
-.checkout-btn:hover {
+.payment-continue:hover {
     transform: translateY(-2px);
 
     box-shadow:
-        0 0 15px rgba(255,216,61,.6),
-        0 0 35px rgba(255,216,61,.25);
+        0 0 15px rgba(255, 216, 61, 0.6),
+        0 0 35px rgba(255, 216, 61, 0.25);
 }
