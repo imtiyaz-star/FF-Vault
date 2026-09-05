@@ -474,84 +474,7 @@
 
 </div>
 
-    <!-- CHECKOUT / ORDER SUMMARY MODAL -->
-
-<div id="checkoutModal" class="checkout-modal hidden">
-
-    <div class="checkout-box">
-
-        <button
-            class="close-checkout"
-            onclick="closeCheckout()"
-        >
-            ×
-        </button>
-
-        <div class="checkout-label">
-            ORDER SUMMARY
-        </div>
-
-        <h2>
-            Review Your Order
-        </h2>
-
-
-        <div class="checkout-row">
-
-            <span>
-                Selected Item
-            </span>
-
-            <strong id="checkoutItem">
-                ---
-            </strong>
-
-        </div>
-
-
-        <div class="checkout-row">
-
-            <span>
-                Price
-            </span>
-
-            <strong id="checkoutPrice">
-                ₹0
-            </strong>
-
-        </div>
-
-
-        <div class="checkout-total">
-
-            <span>
-                FINAL TOTAL
-            </span>
-
-            <strong id="checkoutTotal">
-                ₹0
-            </strong>
-
-        </div>
-
-
-        <div class="locked-price">
-
-            🔒 Price locked for this order
-
-        </div>
-
-
-        <button
-            class="checkout-btn"
-            onclick="continueCheckout()"
-        >
-            CONTINUE →
-        </button>
-
-    </div>
-
-</div>
+    
 
 <!-- VERIFICATION / SUBMIT MODAL -->
 
@@ -689,6 +612,47 @@
 
 </footer>
 
+<!-- PAYMENT QR MODAL -->
+<div id="paymentModal" class="payment-modal hidden">
+    <div class="payment-box">
+
+        <button class="payment-close" onclick="closePayment()">×</button>
+
+        <div class="payment-label">SECURE PAYMENT</div>
+
+        <h2>Complete Your Payment</h2>
+
+        <div class="payment-item">
+            <span>Selected Item</span>
+            <strong id="paymentItem">---</strong>
+        </div>
+
+        <div class="payment-amount">
+            <span>PAY EXACTLY</span>
+            <strong id="paymentAmount">₹0</strong>
+        </div>
+
+        <div class="qr-wrapper">
+            <div id="paymentQR"></div>
+        </div>
+
+        <p class="scan-text">
+            Scan this QR with your UPI app
+        </p>
+
+        <p class="amount-note">
+            🔒 Amount is automatically included in the payment request.
+        </p>
+
+        <button class="payment-continue" onclick="continueAfterPayment()">
+            CONTINUE →
+        </button>
+
+    </div>
+</div>
+
+<!-- QR CODE LIBRARY -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 <script src="script.js"></script>
 
