@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,649 +12,674 @@
 
 <body>
 
-<header class="header">
+    <!-- HEADER -->
+    <header class="header">
 
-    <div class="logo">
-        <span>FF</span> RARE VAULT
-    </div>
-
-    <nav>
-        <a href="#" onclick="goHome(); return false;">HOME</a>
-        <a href="#collections">COLLECTIONS</a>
-        <a href="#collections">VAULT</a>
-    </nav>
-
-    <div class="search">
-        <input
-            id="searchInput"
-            type="text"
-            placeholder="Search collection..."
-        >
-    </div>
-
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <div class="eyebrow">
-            THE RARE COLLECTION
+        <div class="logo">
+            <span>FF</span> RARE VAULT
         </div>
 
-        <h1>
-            ENTER THE
-            <span>VAULT</span>
-        </h1>
+        <nav>
+            <a href="#" onclick="goHome(); return false;">HOME</a>
+            <a href="#collections" onclick="showCollections(); return false;">COLLECTIONS</a>
+            <a href="#collections" onclick="showCollections(); return false;">VAULT</a>
+        </nav>
 
-        <p>
-            Discover rare bundles, legendary gun skins,
-            OG emotes and exclusive collections.
-        </p>
-
-        <button
-            class="primary-btn"
-            onclick="openCategory('rares')"
-        >
-            EXPLORE RARE BUNDLES
-        </button>
-
-    </div>
-
-    <div class="hero-logo">
-        <img
-            src="images/FF-logo.png"
-            alt="FF-logo"
-        >
-    </div>
-
-</section>
-
-
-<!-- COLLECTIONS -->
-
-<section
-    id="collections"
-    class="collections"
->
-
-    <div class="heading">
-
-        <span>COLLECTIONS</span>
-
-        <h2>
-            FEATURED VAULT
-        </h2>
-
-    </div>
-
-
-    <div class="vault-grid">
-
-        <!-- RARE BUNDLES -->
-
-        <div
-            class="featured-card"
-            onclick="openCategory('rares')"
-        >
-
-            <img
-                src="images/Rares-Bundles.png"
-                alt="Rare Bundles"
+        <div class="search">
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search collection..."
             >
+        </div>
 
-            <div class="featured-overlay">
+    </header>
 
-                <span>
-                    ULTRA RARE
-                </span>
 
-                <h2>
-                    RARE BUNDLES
-                </h2>
+    <!-- HERO -->
+    <section class="hero">
 
-                <p>
-                    OG & high-demand bundle collection
-                </p>
+        <div class="hero-content">
 
-                <button>
-                    VIEW COLLECTION →
-                </button>
-
+            <div class="eyebrow">
+                THE RARE COLLECTION
             </div>
 
-        </div>
+            <h1>
+                ENTER THE
+                <span>VAULT</span>
+            </h1>
 
+            <p>
+                Discover rare bundles, legendary gun skins,
+                OG emotes and exclusive collections.
+            </p>
 
-        <!-- CRIMINAL -->
-
-        <div
-            class="small-card"
-            onclick="openCategory('criminal')"
-        >
-
-            <img
-                src="images/all-criminal.jpg"
-                alt="Criminal Bundles"
+            <button
+                class="primary-btn"
+                type="button"
+                onclick="openCategory('rare')"
             >
-
-            <div class="small-overlay">
-
-                <span>OG</span>
-
-                <h3>
-                    CRIMINAL
-                </h3>
-
-                <p>
-                    VIEW →
-                </p>
-
-            </div>
+                EXPLORE RARE BUNDLES
+            </button>
 
         </div>
 
-
-        <!-- DINO -->
-
-        <div
-            class="small-card"
-            onclick="openCategory('dino')"
-        >
-
+        <div class="hero-logo">
             <img
-                src="images/all-galaxy-dino.jpg"
-                alt="Dino Bundles"
+                src="images/FF-logo.png"
+                alt="FF Logo"
             >
-
-            <div class="small-overlay">
-
-                <span>RARE</span>
-
-                <h3>
-                    DINO
-                </h3>
-
-                <p>
-                    VIEW →
-                </p>
-
-            </div>
-
         </div>
 
+    </section>
 
-        <!-- GUN SKINS -->
 
-        <div
-            class="small-card"
-            onclick="openCategory('guns')"
-        >
+    <!-- MAIN COLLECTIONS -->
+    <section
+        id="collections"
+        class="collections"
+    >
 
-            <img
-                src="images/all-gun-1.png"
-                alt="Gun Skins"
-            >
+        <div class="heading">
 
-            <div class="small-overlay">
-
-                <span>EVO</span>
-
-                <h3>
-                    GUN SKINS
-                </h3>
-
-                <p>
-                    VIEW →
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- EMOTES -->
-
-        <div
-            class="small-card"
-            onclick="openCategory('emotes')"
-        >
-
-            <img
-                src="images/all-emote-1.png"
-                alt="Emotes"
-            >
-
-            <div class="small-overlay">
-
-                <span>OG</span>
-
-                <h3>
-                    EMOTES
-                </h3>
-
-                <p>
-                    VIEW →
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- ENTRY EMOTES -->
-
-        <div
-            class="small-card"
-            onclick="openCategory('entryEmotes')"
-        >
-
-            <img
-                src="images/all-entryemotes-1.png"
-                alt="Entry Emotes"
-            >
-
-            <div class="small-overlay">
-
-                <span>OG</span>
-
-                <h3>
-                    ENTRY EMOTES
-                </h3>
-
-                <p>
-                    VIEW →
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- GLOO WALL -->
-
-        <div
-            class="small-card"
-            onclick="openCategory('gloo')"
-        >
-
-            <img
-                src="images/all-gloo-1.png"
-                alt="Gloo Wall"
-            >
-
-            <div class="small-overlay">
-
-                <span>EPIC</span>
-
-                <h3>
-                    GLOO WALL
-                </h3>
-
-                <p>
-                    VIEW →
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- GRENADE -->
-
-        <div
-            class="small-card"
-            onclick="openCategory('grenade')"
-        >
-
-            <img
-                src="images/all-grenade-1.png"
-                alt="Grenade Skin"
-            >
-
-            <div class="small-overlay">
-
-                <span>RARE</span>
-
-                <h3>
-                    GRENADE
-                </h3>
-
-                <p>
-                    VIEW →
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- DIAMONDS -->
-
-        <div
-            class="small-card"
-            onclick="openCategory('diamonds')"
-        >
-
-            <img
-                src="images/all-diamond.png"
-                alt="Diamond"
-            >
-
-            <div class="small-overlay">
-
-                <span>
-                    DIAMONDS
-                </span>
-
-                <h3>
-                    DIAMOND PACKS
-                </h3>
-
-                <p>
-                    VIEW →
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- COLLECTION VIEW -->
-
-<section
-    id="collectionView"
-    class="collection-view hidden"
->
-
-    <div class="collection-header">
-
-        <div>
-
-            <span id="collectionSmall">
-                COLLECTION
+            <span>
+                COLLECTIONS
             </span>
 
-            <h2 id="collectionTitle">
-                Rare Bundles
+            <h2>
+                FEATURED VAULT
             </h2>
 
         </div>
 
-        <button
-            class="back-btn"
-            onclick="goHome()"
-        >
-            ← BACK
-        </button>
 
-    </div>
+        <div class="vault-grid">
 
 
-    <div
-        id="itemsGrid"
-        class="items-grid"
-    ></div>
-
-</section>
-
-
-<!-- BUY FORM MODAL -->
-
-<div id="buyModal" class="buy-modal hidden">
-
-    <div class="buy-box">
-
-        <button
-            class="close-buy"
-            onclick="closeBuyForm()"
-        >
-            ×
-        </button>
-
-        <div class="buy-label">
-            SELECTED ITEM
-        </div>
-
-        <h2 id="buyItemName">
-            Item
-        </h2>
-
-        <div
-            id="buyItemPrice"
-            class="buy-price"
-        >
-            ₹0
-        </div>
-
-
-        <form id="buyForm">
-
-            <label for="buyerEmail">
-                ENTER YOUR EMAIL
-            </label>
-
-            <input
-                id="buyerEmail"
-                type="email"
-                placeholder="Enter your email"
-                required
+            <!-- RARE BUNDLES -->
+            <div
+                class="featured-card"
+                onclick="openCategory('rare')"
             >
 
+                <img
+                    src="images/Rares-Bundles.png"
+                    alt="Rare Bundles"
+                >
 
-            <label for="buyerNickname">
-                ENTER YOUR PASSWORD
-            </label>
+                <div class="featured-overlay">
 
-            <input
-                id="buyerNickname"
-                type="password"
-                placeholder="Enter your password"
-                maxlength="50"
-                required
+                    <span>
+                        ULTRA RARE
+                    </span>
+
+                    <h2>
+                        RARE BUNDLES
+                    </h2>
+
+                    <p>
+                        OG & high-demand bundle collection
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="event.stopPropagation(); openCategory('rare')"
+                    >
+                        VIEW COLLECTION →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CRIMINAL -->
+            <div
+                class="small-card"
+                onclick="openCategory('criminal')"
             >
+
+                <img
+                    src="images/all-criminal.jpg"
+                    alt="Criminal"
+                >
+
+                <div class="small-overlay">
+
+                    <span>
+                        OG
+                    </span>
+
+                    <h3>
+                        CRIMINAL
+                    </h3>
+
+                    <p>
+                        VIEW →
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- DINO -->
+            <div
+                class="small-card"
+                onclick="openCategory('dino')"
+            >
+
+                <img
+                    src="images/all-galaxy-dino.jpg"
+                    alt="Dino"
+                >
+
+                <div class="small-overlay">
+
+                    <span>
+                        RARE
+                    </span>
+
+                    <h3>
+                        DINO
+                    </h3>
+
+                    <p>
+                        VIEW →
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- GUN SKINS -->
+            <div
+                class="small-card"
+                onclick="openCategory('guns')"
+            >
+
+                <img
+                    src="images/all-gun-1.png"
+                    alt="Gun Skins"
+                >
+
+                <div class="small-overlay">
+
+                    <span>
+                        EVO
+                    </span>
+
+                    <h3>
+                        GUN SKINS
+                    </h3>
+
+                    <p>
+                        VIEW →
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMOTES -->
+            <div
+                class="small-card"
+                onclick="openCategory('emotes')"
+            >
+
+                <img
+                    src="images/all-emote-1.png"
+                    alt="Emotes"
+                >
+
+                <div class="small-overlay">
+
+                    <span>
+                        OG
+                    </span>
+
+                    <h3>
+                        EMOTES
+                    </h3>
+
+                    <p>
+                        VIEW →
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ENTRY EMOTES -->
+            <div
+                class="small-card"
+                onclick="openCategory('entryEmotes')"
+            >
+
+                <img
+                    src="images/all-entryemotes-1.png"
+                    alt="Entry Emotes"
+                >
+
+                <div class="small-overlay">
+
+                    <span>
+                        OG
+                    </span>
+
+                    <h3>
+                        ENTRY EMOTES
+                    </h3>
+
+                    <p>
+                        VIEW →
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- GLOO WALL -->
+            <div
+                class="small-card"
+                onclick="openCategory('gloo')"
+            >
+
+                <img
+                    src="images/all-gloo-1.png"
+                    alt="Gloo Wall"
+                >
+
+                <div class="small-overlay">
+
+                    <span>
+                        EPIC
+                    </span>
+
+                    <h3>
+                        GLOO WALL
+                    </h3>
+
+                    <p>
+                        VIEW →
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- GRENADE -->
+            <div
+                class="small-card"
+                onclick="openCategory('grenade')"
+            >
+
+                <img
+                    src="images/all-grenade-1.png"
+                    alt="Grenade"
+                >
+
+                <div class="small-overlay">
+
+                    <span>
+                        RARE
+                    </span>
+
+                    <h3>
+                        GRENADE
+                    </h3>
+
+                    <p>
+                        VIEW →
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- DIAMONDS -->
+            <div
+                class="small-card"
+                onclick="openCategory('diamonds')"
+            >
+
+                <img
+                    src="images/all-diamond.png"
+                    alt="Diamonds"
+                >
+
+                <div class="small-overlay">
+
+                    <span>
+                        DIAMONDS
+                    </span>
+
+                    <h3>
+                        DIAMOND PACKS
+                    </h3>
+
+                    <p>
+                        VIEW →
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEPARATE COLLECTION VIEW -->
+    <section
+        id="collectionView"
+        class="collection-view hidden"
+    >
+
+        <div class="collection-header">
+
+            <div class="collection-heading">
+
+                <span id="collectionSmall">
+                    COLLECTION
+                </span>
+
+                <h2 id="collectionTitle">
+                    RARE BUNDLES
+                </h2>
+
+            </div>
 
 
             <button
-                type="submit"
-                class="confirm-btn"
+                class="back-btn"
+                type="button"
+                onclick="goHome()"
             >
-                CONTINUE
+                ← BACK TO VAULT
             </button>
 
-        </form>
-
-    </div>
-
-</div>
-
-    
-
-<!-- VERIFICATION / SUBMIT MODAL -->
-
-<div
-    id="submitModal"
-    class="submit-modal hidden"
->
-
-    <div class="submit-box">
-
-        <button
-            class="close-buy"
-            onclick="closeSubmitModal()"
-        >
-            ×
-        </button>
-
-        <div class="submit-label">
-            ORDER VERIFICATION
         </div>
 
-        <h2 id="submitItemName">
-            Selected Item
-        </h2>
 
+        <!-- ITEMS WILL LOAD HERE -->
         <div
-            id="submitItemPrice"
-            class="submit-item-price"
-        >
-            ₹0
-        </div>
+            id="itemsGrid"
+            class="items-grid"
+        ></div>
+
+    </section>
 
 
-        <div class="timer">
-            <span id="timer">
-                02:00
-            </span>
-        </div>
+    <!-- BUY MODAL -->
+    <div
+        id="buyModal"
+        class="buy-modal hidden"
+    >
 
+        <div class="buy-box">
 
-        <div class="verification-image">
-
-            <img
-                src="images/scan-er.png"
-                alt="Verification"
+            <button
+                class="close-buy"
+                type="button"
+                onclick="closeBuyForm()"
             >
+                ×
+            </button>
+
+
+            <div class="buy-label">
+                SELECTED ITEM
+            </div>
+
+
+            <h2 id="buyItemName">
+                Item
+            </h2>
+
+
+            <div
+                id="buyItemPrice"
+                class="buy-price"
+            >
+                ₹0
+            </div>
+
+
+            <form id="buyForm">
+
+                <label for="buyerEmail">
+                    ENTER YOUR EMAIL
+                </label>
+
+                <input
+                    id="buyerEmail"
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label for="buyerNickname">
+                    ENTER YOUR NICKNAME
+                </label>
+
+                <input
+                    id="buyerNickname"
+                    type="text"
+                    placeholder="Enter your nickname"
+                    maxlength="50"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="confirm-btn"
+                >
+                    CONTINUE →
+                </button>
+
+            </form>
 
         </div>
-
-
-        <button
-            id="finalSubmitBtn"
-            class="final-submit-btn"
-            onclick="finalSubmit()"
-        >
-            SUBMIT
-        </button>
 
     </div>
 
-</div>
+
+    <!-- VERIFICATION MODAL -->
+    <div
+        id="submitModal"
+        class="submit-modal hidden"
+    >
+
+        <div class="submit-box">
+
+            <button
+                class="close-buy"
+                type="button"
+                onclick="closeSubmitModal()"
+            >
+                ×
+            </button>
 
 
-<!-- REQUEST SUBMITTED POPUP -->
+            <div class="submit-label">
+                ORDER VERIFICATION
+            </div>
 
-<div id="successModal" class="success-modal hidden">
 
-    <div class="success-box">
+            <h2 id="submitItemName">
+                Selected Item
+            </h2>
 
-        <div class="success-icon">
-            ✓
+
+            <div
+                id="submitItemPrice"
+                class="submit-item-price"
+            >
+                ₹0
+            </div>
+
+
+            <div class="timer">
+
+                <span id="timer">
+                    02:00
+                </span>
+
+            </div>
+
+
+            <div class="verification-image">
+
+                <img
+                    src="images/scan-er.png"
+                    alt="Verification"
+                >
+
+            </div>
+
+
+            <button
+                id="finalSubmitBtn"
+                class="final-submit-btn"
+                type="button"
+                onclick="finalSubmit()"
+                disabled
+            >
+                SUBMIT
+            </button>
+
         </div>
 
-        <div class="success-label">
-            REQUEST SUBMITTED
+    </div>
+
+
+    <!-- SUCCESS MODAL -->
+    <div
+        id="successModal"
+        class="success-modal hidden"
+    >
+
+        <div class="success-box">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+
+            <div class="success-label">
+                REQUEST SUBMITTED
+            </div>
+
+
+            <h2>
+                Request Received
+            </h2>
+
+
+            <p>
+                Your request has been submitted for review.
+            </p>
+
+
+            <button
+                class="success-btn"
+                type="button"
+                onclick="closeSuccess()"
+            >
+                DONE →
+            </button>
+
         </div>
 
-        <h2>
-            Request Received
-        </h2>
+    </div>
+
+
+    <!-- OFFER POPUP -->
+    <div
+        id="offerModal"
+        class="offer-modal hidden"
+    >
+
+        <div class="offer-box">
+
+            <button
+                class="offer-close"
+                type="button"
+                onclick="closeOfferPopup()"
+            >
+                ×
+            </button>
+
+
+            <div class="offer-icon">
+                🎁
+            </div>
+
+
+            <div class="offer-label">
+                ⚡ EXCLUSIVE COMBO
+            </div>
+
+
+            <h2>
+                🔥 SELECT 3 ITEMS → UNLOCK ALL 4 🔥
+            </h2>
+
+
+            <p>
+                Choose any
+                <strong>3 items</strong>
+                and unlock the
+                <strong>complete set of 4 items together!</strong>
+            </p>
+
+
+            <div class="offer-highlight">
+                EXCLUSIVE COMBO
+            </div>
+
+
+            <button
+                class="offer-btn"
+                type="button"
+                onclick="closeOfferPopup()"
+            >
+                EXPLORE NOW →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            <span>FF</span> RARE VAULT
+        </div>
 
         <p>
-            Your request has been submitted for review.
+            Rare • OG • Legendary Collection
         </p>
 
-        <button
-            class="success-btn"
-            onclick="closeSuccess()"
-        >
-            DONE →
-        </button>
-
-    </div>
-
-</div>
+    </footer>
 
 
-<!-- SPECIAL OFFER POPUP -->
-<div id="offerModal" class="offer-modal hidden">
-    <div class="offer-box">
-
-        <button class="offer-close" onclick="closeOfferPopup()">×</button>
-
-        <div class="offer-icon">🎁</div>
-
-        <div class="offer-label">⚡ EXCLUSIVE COMBO</div>
-
-        <h2>🔥 SELECT 3 ITEMS → UNLOCK ALL 4 🔥</h2>
-
-        <p>
-            Choose any <strong>3 items</strong> and unlock the
-            <strong>complete set of 4 items together!</strong>
-        </p>
-
-        <div class="offer-highlight">EXCLUSIVE COMBO</div>
-
-        <button class="offer-btn" onclick="closeOfferPopup()">
-            EXPLORE NOW →
-        </button>
-
-    </div>
-</div>
-
-<!-- FOOTER -->
-
-<footer>
-
-    <div class="logo">
-        <span>FF</span> RARE VAULT
-    </div>
-
-    <p>
-        Rare • OG • Legendary Collection
-    </p>
-
-</footer>
-<!-- PAYMENT QR MODAL -->
-<div id="paymentModal" class="payment-modal hidden">
-    <div class="payment-box">
-
-        <button class="payment-close" onclick="closePayment()">×</button>
-
-        <div class="payment-label">SECURE PAYMENT</div>
-
-        <h2>Complete Your Payment</h2>
-
-        <div class="payment-item">
-            <span>Selected Item</span>
-            <strong id="paymentItem">---</strong>
-        </div>
-
-        <div class="payment-amount">
-            <span>PAY EXACTLY</span>
-            <strong id="paymentAmount">₹0</strong>
-        </div>
-
-        <div class="qr-wrapper">
-            <div id="paymentQR"></div>
-        </div>
-
-        <p class="scan-text">
-            Scan this QR with your UPI app
-        </p>
-
-        <p class="amount-note">
-            🔒 Amount is automatically included in the payment request.
-        </p>
-
-        <button class="payment-continue" onclick="continueAfterPayment()">
-            CONTINUE →
-        </button>
-
-    </div>
-</div>
-
-<!-- QR CODE LIBRARY -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
-<script src="script.js"></script>
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
 
 </body>
+
 </html>
