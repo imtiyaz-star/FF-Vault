@@ -1,246 +1,542 @@
-/* =====================================================
-   FF RARE VAULT - SIMPLE VERSION
-===================================================== */
+/* =========================================================
+   FF RARE VAULT - SCRIPT
+========================================================= */
 
 
-/* =========================
+/* =========================================================
    COLLECTION DATA
-========================= */
+========================================================= */
 
 const collections = {
 
-    rare: [
-        ["Arctic Blue Bundle", "LEGENDARY", "images/Rares-Bundles.png", "₹150"],
-        ["Zombie Samurai", "RARE", "images/Rares-Bundles.png", "₹80"],
-        ["Knight Clown", "RARE", "images/Rares-Bundles.png", "₹50"],
-        ["Angelic Bundle", "EPIC", "images/Rares-Bundles.png", "₹50"],
-        ["Bunny Warrior", "RARE", "images/Rares-Bundles.png", "₹80"],
-        ["Galaxy Dino", "EPIC", "images/Rares-Bundles.png", "₹80"],
-        ["HipHop Bundle", "LEGENDARY", "images/Rares-Bundles.png", "₹99"],
-        ["Shadow Red", "RARE", "images/Rares-Bundles.png", "₹80"],
-        ["Sakura Bundle", "LEGENDARY", "images/Rares-Bundles.png", "₹150"]
-    ],
+    rare: {
+        title: "RARE BUNDLES",
+        small: "ULTRA RARE",
 
-    criminal: [
-        ["Red Criminal", "LEGENDARY", "images/all-criminal.jpg", "₹100"],
-        ["Blue Criminal", "LEGENDARY", "images/all-criminal.jpg", "₹150"],
-        ["Green Criminal", "EPIC", "images/all-criminal.jpg", "₹100"],
-        ["Purple Criminal", "EPIC", "images/all-criminal.jpg", "₹100"],
-        ["Black Criminal", "LEGENDARY", "images/all-criminal.jpg", "₹150"]
-    ],
+        items: [
+            {
+                name: "Arctic Blue Bundle",
+                price: 150,
+                rarity: "ULTRA RARE",
+                image: "images/Rares-Bundles.png"
+            },
+            {
+                name: "Zombie Samurai",
+                price: 80,
+                rarity: "RARE",
+                image: "images/Rares-Bundles.png"
+            },
+            {
+                name: "Knight Clown",
+                price: 50,
+                rarity: "OG",
+                image: "images/Rares-Bundles.png"
+            },
+            {
+                name: "Angelic Bundle",
+                price: 50,
+                rarity: "LEGENDARY",
+                image: "images/Rares-Bundles.png"
+            },
+            {
+                name: "Bunny Warrior",
+                price: 80,
+                rarity: "RARE",
+                image: "images/Rares-Bundles.png"
+            },
+            {
+                name: "Galaxy Dino",
+                price: 80,
+                rarity: "RARE",
+                image: "images/Rares-Bundles.png"
+            },
+            {
+                name: "HipHop Bundle",
+                price: 99,
+                rarity: "OG",
+                image: "images/Rares-Bundles.png"
+            },
+            {
+                name: "Shadow Red",
+                price: 80,
+                rarity: "RARE",
+                image: "images/Rares-Bundles.png"
+            },
+            {
+                name: "Sakura Bundle",
+                price: 150,
+                rarity: "LEGENDARY",
+                image: "images/Rares-Bundles.png"
+            }
+        ]
+    },
 
-    dino: [
-        ["Galaxy Dino", "LEGENDARY", "images/all-galaxy-dino.jpg", "₹100"],
-        ["Green Dino", "EPIC", "images/all-galaxy-dino.jpg", "₹150"],
-        ["Blue Dino", "EPIC", "images/all-galaxy-dino.jpg", "₹100"],
-        ["Pink Dino", "RARE", "images/all-galaxy-dino.jpg", "₹100"],
-        ["Yellow Dino", "LEGENDARY", "images/all-galaxy-dino.jpg", "₹150"]
-    ],
 
-    guns: [
-        ["EVO Gun 01", "LEGENDARY", "images/all-gun-1.png", "₹200"],
-        ["EVO Gun 02", "LEGENDARY", "images/all-gun-1.png", "₹200"]
-    ],
+    criminal: {
+        title: "CRIMINAL",
+        small: "OG COLLECTION",
 
-    emotes: [
-        ["Rare Emote 01", "EPIC", "images/all-emote-1.png", "₹50"],
-        ["Rare Emote 02", "LEGENDARY", "images/all-emote-1.png", "₹80"],
-        ["Rare Emote 03", "EPIC", "images/all-emote-1.png", "₹60"],
-        ["Rare Emote 04", "LEGENDARY", "images/all-emote-1.png", "₹100"]
-    ],
+        items: [
+            {
+                name: "Red Criminal",
+                price: 100,
+                rarity: "OG",
+                image: "images/all-criminal.jpg"
+            },
+            {
+                name: "Blue Criminal",
+                price: 150,
+                rarity: "ULTRA RARE",
+                image: "images/all-criminal.jpg"
+            },
+            {
+                name: "Green Criminal",
+                price: 100,
+                rarity: "RARE",
+                image: "images/all-criminal.jpg"
+            },
+            {
+                name: "Purple Criminal",
+                price: 100,
+                rarity: "RARE",
+                image: "images/all-criminal.jpg"
+            },
+            {
+                name: "Black Criminal",
+                price: 150,
+                rarity: "ULTRA RARE",
+                image: "images/all-criminal.jpg"
+            }
+        ]
+    },
 
-    entryEmotes: [
-        ["Entry Emote 01", "EPIC", "images/all-entryemotes-1.png", "₹60"],
-        ["Entry Emote 02", "LEGENDARY", "images/all-entryemotes-1.png", "₹80"],
-        ["Entry Emote 03", "EPIC", "images/all-entryemotes-1.png", "₹70"],
-        ["Entry Emote 04", "LEGENDARY", "images/all-entryemotes-1.png", "₹100"]
-    ],
 
-    gloo: [
-        ["Gloo Wall 01", "RARE", "images/all-gloo-1.png", "₹50"],
-        ["Gloo Wall 02", "EPIC", "images/all-gloo-1.png", "₹80"],
-        ["Gloo Wall 03", "LEGENDARY", "images/all-gloo-1.png", "₹100"],
-        ["Gloo Wall 04", "EPIC", "images/all-gloo-1.png", "₹70"]
-    ],
+    dino: {
+        title: "DINO COLLECTION",
+        small: "RARE DINO",
 
-    grenade: [
-        ["Grenade Skin 01", "RARE", "images/all-grenade-1.png", "₹50"],
-        ["Grenade Skin 02", "EPIC", "images/all-grenade-1.png", "₹70"],
-        ["Grenade Skin 03", "LEGENDARY", "images/all-grenade-1.png", "₹90"],
-        ["Grenade Skin 04", "EPIC", "images/all-grenade-1.png", "₹60"]
-    ],
+        items: [
+            {
+                name: "Galaxy Dino",
+                price: 100,
+                rarity: "RARE",
+                image: "images/all-galaxy-dino.jpg"
+            },
+            {
+                name: "Green Dino",
+                price: 150,
+                rarity: "ULTRA RARE",
+                image: "images/all-galaxy-dino.jpg"
+            },
+            {
+                name: "Blue Dino",
+                price: 100,
+                rarity: "RARE",
+                image: "images/all-galaxy-dino.jpg"
+            },
+            {
+                name: "Pink Dino",
+                price: 100,
+                rarity: "RARE",
+                image: "images/all-galaxy-dino.jpg"
+            },
+            {
+                name: "Yellow Dino",
+                price: 150,
+                rarity: "ULTRA RARE",
+                image: "images/all-galaxy-dino.jpg"
+            }
+        ]
+    },
 
-    diamonds: [
-        ["1,000 Diamonds", "POPULAR", "images/all-diamond.png", "₹50"],
-        ["5,000 Diamonds", "POPULAR", "images/all-diamond.png", "₹100"],
-        ["10,000 Diamonds", "LEGENDARY", "images/all-diamond.png", "₹400"]
-    ]
+
+    guns: {
+        title: "GUN SKINS",
+        small: "EVO COLLECTION",
+
+        items: [
+            {
+                name: "EVO Gun 01",
+                price: 200,
+                rarity: "EVO",
+                image: "images/all-gun-1.png"
+            },
+            {
+                name: "EVO Gun 02",
+                price: 200,
+                rarity: "EVO",
+                image: "images/all-gun-1.png"
+            },
+            {
+                name: "Legendary Gun Skin",
+                price: 250,
+                rarity: "LEGENDARY",
+                image: "images/all-gun-1.png"
+            },
+            {
+                name: "Rare Gun Skin",
+                price: 150,
+                rarity: "RARE",
+                image: "images/all-gun-1.png"
+            }
+        ]
+    },
+
+
+    emotes: {
+        title: "EMOTES",
+        small: "OG EMOTES",
+
+        items: [
+            {
+                name: "OG Emote 01",
+                price: 50,
+                rarity: "OG",
+                image: "images/all-emote-1.png"
+            },
+            {
+                name: "OG Emote 02",
+                price: 70,
+                rarity: "RARE",
+                image: "images/all-emote-1.png"
+            },
+            {
+                name: "Legendary Emote",
+                price: 100,
+                rarity: "LEGENDARY",
+                image: "images/all-emote-1.png"
+            },
+            {
+                name: "Rare Emote",
+                price: 80,
+                rarity: "RARE",
+                image: "images/all-emote-1.png"
+            }
+        ]
+    },
+
+
+    entryEmotes: {
+        title: "ENTRY EMOTES",
+        small: "OG ENTRY",
+
+        items: [
+            {
+                name: "Entry Emote 01",
+                price: 60,
+                rarity: "OG",
+                image: "images/all-entryemotes-1.png"
+            },
+            {
+                name: "Entry Emote 02",
+                price: 80,
+                rarity: "RARE",
+                image: "images/all-entryemotes-1.png"
+            },
+            {
+                name: "Legendary Entry Emote",
+                price: 120,
+                rarity: "LEGENDARY",
+                image: "images/all-entryemotes-1.png"
+            }
+        ]
+    },
+
+
+    gloo: {
+        title: "GLOO WALL",
+        small: "EPIC COLLECTION",
+
+        items: [
+            {
+                name: "Gloo Wall 01",
+                price: 80,
+                rarity: "EPIC",
+                image: "images/all-gloo-1.png"
+            },
+            {
+                name: "Gloo Wall 02",
+                price: 100,
+                rarity: "RARE",
+                image: "images/all-gloo-1.png"
+            },
+            {
+                name: "Legendary Gloo Wall",
+                price: 150,
+                rarity: "LEGENDARY",
+                image: "images/all-gloo-1.png"
+            }
+        ]
+    },
+
+
+    grenade: {
+        title: "GRENADE",
+        small: "RARE COLLECTION",
+
+        items: [
+            {
+                name: "Grenade Skin 01",
+                price: 50,
+                rarity: "RARE",
+                image: "images/all-grenade-1.png"
+            },
+            {
+                name: "Grenade Skin 02",
+                price: 70,
+                rarity: "EPIC",
+                image: "images/all-grenade-1.png"
+            },
+            {
+                name: "Legendary Grenade",
+                price: 100,
+                rarity: "LEGENDARY",
+                image: "images/all-grenade-1.png"
+            }
+        ]
+    },
+
+
+    diamonds: {
+        title: "DIAMOND PACKS",
+        small: "DIAMONDS",
+
+        items: [
+            {
+                name: "1,000 Diamonds",
+                price: 50,
+                rarity: "DIAMONDS",
+                image: "images/all-diamond.png"
+            },
+            {
+                name: "5,000 Diamonds",
+                price: 100,
+                rarity: "DIAMONDS",
+                image: "images/all-diamond.png"
+            },
+            {
+                name: "10,000 Diamonds",
+                price: 400,
+                rarity: "DIAMONDS",
+                image: "images/all-diamond.png"
+            }
+        ]
+    }
 
 };
 
 
-/* =========================
-   VARIABLES
-========================= */
+/* =========================================================
+   GLOBAL VARIABLES
+========================================================= */
 
 let selectedItem = "";
-let selectedPrice = "";
+let selectedPrice = 0;
 
-let buyerEmail = "";
-let buyerNickname = "";
+let currentCollection = "";
 
-let orderId = null;
+let currentOrderId = null;
 
-let countdownInterval = null;
+let timerInterval = null;
+let remainingSeconds = 120;
 
 
-/* =========================
-   OPEN CATEGORY
-========================= */
+/* =========================================================
+   ELEMENTS
+========================================================= */
 
-function openCategory(category) {
+const collectionsSection =
+    document.getElementById("collections");
 
-    const data = collections[category];
+const collectionView =
+    document.getElementById("collectionView");
 
-    if (!data) {
-        console.error("Category not found:", category);
+const itemsGrid =
+    document.getElementById("itemsGrid");
+
+const collectionSmall =
+    document.getElementById("collectionSmall");
+
+const collectionTitle =
+    document.getElementById("collectionTitle");
+
+const buyModal =
+    document.getElementById("buyModal");
+
+const submitModal =
+    document.getElementById("submitModal");
+
+const successModal =
+    document.getElementById("successModal");
+
+const offerModal =
+    document.getElementById("offerModal");
+
+const buyItemName =
+    document.getElementById("buyItemName");
+
+const buyItemPrice =
+    document.getElementById("buyItemPrice");
+
+const submitItemName =
+    document.getElementById("submitItemName");
+
+const submitItemPrice =
+    document.getElementById("submitItemPrice");
+
+const timerElement =
+    document.getElementById("timer");
+
+const finalSubmitBtn =
+    document.getElementById("finalSubmitBtn");
+
+const buyForm =
+    document.getElementById("buyForm");
+
+const searchInput =
+    document.getElementById("searchInput");
+
+
+/* =========================================================
+   OPEN COLLECTION
+========================================================= */
+
+function openCategory(categoryKey) {
+
+    const collection =
+        collections[categoryKey];
+
+    if (!collection) {
+        console.error("Collection not found:", categoryKey);
         return;
     }
 
-    const collectionView =
-        document.getElementById("collectionView");
+    currentCollection = categoryKey;
 
-    const itemsGrid =
-        document.getElementById("itemsGrid");
+    /* Hide main collection section */
+    collectionsSection.classList.add("hidden");
 
-    const collectionTitle =
-        document.getElementById("collectionTitle");
+    /* Hide hero */
+    const hero =
+        document.querySelector(".hero");
 
-    const collectionSmall =
-        document.getElementById("collectionSmall");
-
-
-    if (!collectionView || !itemsGrid) {
-        console.error("Collection elements not found.");
-        return;
+    if (hero) {
+        hero.classList.add("hidden");
     }
 
-
-    /* Clear old items */
-
-    itemsGrid.innerHTML = "";
-
-
-    /* Collection title */
-
-    const titles = {
-        rare: "Rare Bundles",
-        criminal: "Criminal Bundles",
-        dino: "Dino Bundles",
-        guns: "Gun Skins",
-        emotes: "Emotes",
-        entryEmotes: "Entry Emotes",
-        gloo: "Gloo Wall",
-        grenade: "Grenade Skins",
-        diamonds: "Diamond Packs"
-    };
-
-
-    if (collectionSmall) {
-        collectionSmall.textContent = "COLLECTION";
-    }
-
-    if (collectionTitle) {
-        collectionTitle.textContent =
-            titles[category] || "Collection";
-    }
-
-
-    /* Show collection section */
-
+    /* Show collection view */
     collectionView.classList.remove("hidden");
 
+    /* Update heading */
+    collectionSmall.textContent =
+        collection.small;
 
-    /* Create cards */
+    collectionTitle.textContent =
+        collection.title;
 
-    data.forEach(item => {
+    /* Clear old items */
+    itemsGrid.innerHTML = "";
 
-        const itemName = item[0];
-        const rarity = item[1];
-        const image = item[2];
-        const price = item[3];
-
+    /* Create item cards */
+    collection.items.forEach((item) => {
 
         const card =
-            document.createElement("div");
+            document.createElement("article");
 
         card.className = "item-card";
 
 
-        card.innerHTML = `
+        const imageBox =
+            document.createElement("div");
 
-            <div class="item-image">
-
-                <img
-                    src="${image}"
-                    alt="${itemName}"
-                >
-
-            </div>
+        imageBox.className = "item-image";
 
 
-            <div class="item-info">
+        const image =
+            document.createElement("img");
 
-                <div class="item-rarity">
-                    ${rarity}
-                </div>
+        image.src = item.image;
+        image.alt = item.name;
 
-
-                <h3>
-                    ${itemName}
-                </h3>
+        imageBox.appendChild(image);
 
 
-                <div class="item-bottom">
+        const info =
+            document.createElement("div");
 
-                    <strong>
-                        ${price}
-                    </strong>
+        info.className = "item-info";
 
 
-                    <button
-                        class="buy-btn"
-                        type="button"
-                    >
-                        BUY NOW
-                    </button>
+        const rarity =
+            document.createElement("div");
 
-                </div>
+        rarity.className = "item-rarity";
 
-            </div>
+        rarity.textContent =
+            item.rarity;
 
-        `;
+
+        const name =
+            document.createElement("h3");
+
+        name.textContent =
+            item.name;
+
+
+        const bottom =
+            document.createElement("div");
+
+        bottom.className = "item-bottom";
+
+
+        const price =
+            document.createElement("strong");
+
+        price.textContent =
+            `₹${item.price}`;
 
 
         const buyButton =
-            card.querySelector(".buy-btn");
+            document.createElement("button");
+
+        buyButton.type = "button";
+
+        buyButton.className = "buy-btn";
+
+        buyButton.textContent =
+            "BUY NOW →";
 
 
-        if (buyButton) {
+        buyButton.addEventListener(
+            "click",
+            function (event) {
 
-            buyButton.addEventListener(
-                "click",
-                function () {
+                event.stopPropagation();
 
-                    openBuyForm(
-                        itemName,
-                        price
-                    );
+                openBuyForm(
+                    item.name,
+                    item.price
+                );
 
-                }
-            );
+            }
+        );
 
-        }
+
+        bottom.appendChild(price);
+
+        bottom.appendChild(buyButton);
+
+
+        info.appendChild(rarity);
+
+        info.appendChild(name);
+
+        info.appendChild(bottom);
+
+
+        card.appendChild(imageBox);
+
+        card.appendChild(info);
 
 
         itemsGrid.appendChild(card);
@@ -248,78 +544,102 @@ function openCategory(category) {
     });
 
 
-    /* Scroll to collection */
-
-    collectionView.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+    /* Scroll to top */
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
     });
 
 }
 
 
-/* =========================
-   OPEN BUY FORM
-========================= */
+/* =========================================================
+   SHOW COLLECTIONS / HOME
+========================================================= */
 
-function openBuyForm(item, price) {
+function showCollections() {
 
-    selectedItem = item;
-    selectedPrice = price;
+    closeAllModals();
 
+    const hero =
+        document.querySelector(".hero");
 
-    const itemName =
-        document.getElementById("buyItemName");
-
-    const itemPrice =
-        document.getElementById("buyItemPrice");
-
-
-    if (itemName) {
-        itemName.textContent = item;
+    if (hero) {
+        hero.classList.remove("hidden");
     }
 
+    collectionsSection.classList.remove("hidden");
 
-    if (itemPrice) {
-        itemPrice.textContent = price;
-    }
+    collectionView.classList.add("hidden");
 
-
-    const modal =
-        document.getElementById("buyModal");
-
-
-    if (modal) {
-        modal.classList.remove("hidden");
-    }
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 }
 
 
-/* =========================
-   CLOSE BUY FORM
-========================= */
+/* =========================================================
+   GO HOME
+========================================================= */
+
+function goHome() {
+
+    showCollections();
+
+}
+
+
+/* =========================================================
+   BUY FORM
+========================================================= */
+
+function openBuyForm(itemName, price) {
+
+    selectedItem = itemName;
+
+    selectedPrice = Number(price);
+
+
+    buyItemName.textContent =
+        selectedItem;
+
+    buyItemPrice.textContent =
+        `₹${selectedPrice}`;
+
+
+    buyModal.classList.remove("hidden");
+
+
+    setTimeout(() => {
+
+        const email =
+            document.getElementById("buyerEmail");
+
+        if (email) {
+            email.focus();
+        }
+
+    }, 100);
+
+}
+
+
+/* =========================================================
+   CLOSE BUY MODAL
+========================================================= */
 
 function closeBuyForm() {
 
-    const modal =
-        document.getElementById("buyModal");
-
-
-    if (modal) {
-        modal.classList.add("hidden");
-    }
+    buyModal.classList.add("hidden");
 
 }
 
 
-/* =========================
+/* =========================================================
    BUY FORM SUBMIT
-========================= */
-
-const buyForm =
-    document.getElementById("buyForm");
-
+========================================================= */
 
 if (buyForm) {
 
@@ -330,47 +650,43 @@ if (buyForm) {
             event.preventDefault();
 
 
-            const emailInput =
-                document.getElementById("buyerEmail");
-
-            const nicknameInput =
-                document.getElementById("buyerNickname");
-
-
-            buyerEmail =
-                emailInput
-                    ? emailInput.value.trim()
-                    : "";
+            const email =
+                document.getElementById("buyerEmail")
+                    .value
+                    .trim();
 
 
-            buyerNickname =
-                nicknameInput
-                    ? nicknameInput.value.trim()
-                    : "";
+            const nickname =
+                document.getElementById("buyerNickname")
+                    .value
+                    .trim();
 
 
-            if (!buyerEmail) {
+            if (!email || !nickname) {
 
-                alert("Please enter your email.");
+                alert(
+                    "Please enter your email and nickname."
+                );
 
                 return;
+
             }
 
 
-            if (!buyerNickname) {
-
-                alert("Please enter your nickname.");
-
-                return;
-            }
+            const button =
+                buyForm.querySelector(
+                    ".confirm-btn"
+                );
 
 
-            if (!selectedItem || !selectedPrice) {
+            const oldText =
+                button.textContent;
 
-                alert("Please select an item first.");
 
-                return;
-            }
+            button.disabled = true;
+
+            button.textContent =
+                "PLEASE WAIT...";
 
 
             try {
@@ -379,7 +695,6 @@ if (buyForm) {
                     await fetch(
                         "/api/orders",
                         {
-
                             method: "POST",
 
                             headers: {
@@ -389,10 +704,9 @@ if (buyForm) {
 
                             body: JSON.stringify({
 
-                                email: buyerEmail,
+                                email: email,
 
-                                nickname:
-                                    buyerNickname,
+                                nickname: nickname,
 
                                 selectedItem:
                                     selectedItem,
@@ -401,7 +715,6 @@ if (buyForm) {
                                     selectedPrice
 
                             })
-
                         }
                     );
 
@@ -412,92 +725,39 @@ if (buyForm) {
 
                 if (!response.ok) {
 
-                    alert(
+                    throw new Error(
                         data.message ||
-                        data.error ||
-                        "Unable to submit order."
+                        "Unable to create order."
                     );
 
-                    return;
                 }
 
 
-                orderId =
-                    data.id ||
-                    data.orderId ||
-                    null;
+                currentOrderId =
+                    data.orderId;
 
-
-                /* Close buy modal */
 
                 closeBuyForm();
 
 
-                /* Fill verification modal */
-
-                const submitItemName =
-                    document.getElementById(
-                        "submitItemName"
-                    );
+                openSubmitModal();
 
 
-                const submitItemPrice =
-                    document.getElementById(
-                        "submitItemPrice"
-                    );
+            } catch (error) {
 
-
-                if (submitItemName) {
-
-                    submitItemName.textContent =
-                        selectedItem;
-
-                }
-
-
-                if (submitItemPrice) {
-
-                    submitItemPrice.textContent =
-                        selectedPrice;
-
-                }
-
-
-                /* Open verification modal */
-
-                const submitModal =
-                    document.getElementById(
-                        "submitModal"
-                    );
-
-
-                if (submitModal) {
-
-                    submitModal.classList.remove(
-                        "hidden"
-                    );
-
-                }
-
-
-                /* Start timer */
-
-                startTimer();
-
-            }
-
-
-            catch (error) {
-
-                console.error(
-                    "Order error:",
-                    error
-                );
-
+                console.error(error);
 
                 alert(
-                    "Server connection error."
+                    error.message ||
+                    "Something went wrong."
                 );
+
+            } finally {
+
+                button.disabled = false;
+
+                button.textContent =
+                    oldText;
 
             }
 
@@ -507,262 +767,250 @@ if (buyForm) {
 }
 
 
-/* =========================
+/* =========================================================
+   OPEN VERIFICATION
+========================================================= */
+
+function openSubmitModal() {
+
+    submitItemName.textContent =
+        selectedItem;
+
+    submitItemPrice.textContent =
+        `₹${selectedPrice}`;
+
+
+    submitModal.classList.remove(
+        "hidden"
+    );
+
+
+    startTimer();
+
+}
+
+
+/* =========================================================
+   CLOSE VERIFICATION
+========================================================= */
+
+function closeSubmitModal() {
+
+    stopTimer();
+
+    submitModal.classList.add(
+        "hidden"
+    );
+
+}
+
+
+/* =========================================================
    TIMER
-========================= */
+========================================================= */
 
 function startTimer() {
 
-    clearInterval(countdownInterval);
+    stopTimer();
 
 
-    let seconds = 120;
+    remainingSeconds = 120;
 
 
-    const timer =
-        document.getElementById("timer");
-
-
-    const submitButton =
-        document.getElementById(
-            "finalSubmitBtn"
-        );
-
-
-    if (submitButton) {
-
-        submitButton.disabled = true;
-
-        submitButton.style.opacity = "0.5";
-
-        submitButton.style.cursor =
-            "not-allowed";
-
-    }
-
-
-    function updateTimer() {
-
-        const minutes =
-            Math.floor(seconds / 60);
-
-
-        const remaining =
-            seconds % 60;
-
-
-        const formatted =
-            String(remaining)
-                .padStart(2, "0");
-
-
-        if (timer) {
-
-            timer.textContent =
-                `${String(minutes).padStart(2, "0")}:${formatted}`;
-
-        }
-
-
-        if (seconds <= 0) {
-
-            clearInterval(
-                countdownInterval
-            );
-
-
-            if (submitButton) {
-
-                submitButton.disabled = false;
-
-                submitButton.style.opacity = "1";
-
-                submitButton.style.cursor =
-                    "pointer";
-
-            }
-
-
-            return;
-        }
-
-
-        seconds--;
-
-    }
+    finalSubmitBtn.disabled = true;
 
 
     updateTimer();
 
 
-    countdownInterval =
+    timerInterval =
         setInterval(
-            updateTimer,
+            function () {
+
+                remainingSeconds--;
+
+                updateTimer();
+
+
+                if (
+                    remainingSeconds <= 0
+                ) {
+
+                    remainingSeconds = 0;
+
+                    updateTimer();
+
+                    stopTimer();
+
+                    finalSubmitBtn.disabled =
+                        false;
+
+                    finalSubmitBtn.textContent =
+                        "SUBMIT →";
+
+                }
+
+            },
             1000
         );
 
 }
 
 
-/* =========================
-   CLOSE SUBMIT MODAL
-========================= */
+/* =========================================================
+   UPDATE TIMER
+========================================================= */
 
-function closeSubmitModal() {
+function updateTimer() {
 
-    clearInterval(
-        countdownInterval
-    );
-
-
-    const modal =
-        document.getElementById(
-            "submitModal"
+    const minutes =
+        Math.floor(
+            remainingSeconds / 60
         );
 
 
-    if (modal) {
+    const seconds =
+        remainingSeconds % 60;
 
-        modal.classList.add("hidden");
+
+    const formattedMinutes =
+        String(minutes).padStart(
+            2,
+            "0"
+        );
+
+
+    const formattedSeconds =
+        String(seconds).padStart(
+            2,
+            "0"
+        );
+
+
+    timerElement.textContent =
+        `${formattedMinutes}:${formattedSeconds}`;
+
+}
+
+
+/* =========================================================
+   STOP TIMER
+========================================================= */
+
+function stopTimer() {
+
+    if (timerInterval) {
+
+        clearInterval(
+            timerInterval
+        );
+
+        timerInterval = null;
 
     }
 
 }
 
 
-/* =========================
+/* =========================================================
    FINAL SUBMIT
-========================= */
+========================================================= */
 
 async function finalSubmit() {
 
-    const submitButton =
-        document.getElementById(
-            "finalSubmitBtn"
-        );
-
-
-    if (
-        submitButton &&
-        submitButton.disabled
-    ) {
+    if (remainingSeconds > 0) {
 
         return;
+
     }
 
 
-    clearInterval(
-        countdownInterval
-    );
+    if (!currentOrderId) {
+
+        alert(
+            "Order ID not found."
+        );
+
+        return;
+
+    }
 
 
-    /*
-       Don't fake payment confirmation.
-       Just submit the request.
-    */
+    finalSubmitBtn.disabled =
+        true;
+
+    finalSubmitBtn.textContent =
+        "SUBMITTING...";
 
 
-    if (orderId) {
+    try {
 
-        try {
-
-            const response =
-                await fetch(
-                    `/api/orders/${orderId}/status`,
-                    {
-
-                        method: "PATCH",
-
-                        headers: {
-                            "Content-Type":
-                                "application/json"
-                        },
-
-                        body: JSON.stringify({
-                            status: "completed"
-                        })
-
-                    }
-                );
+        const response =
+            await fetch(
+                `/api/orders/${currentOrderId}/submit`,
+                {
+                    method: "POST"
+                }
+            );
 
 
-            if (!response.ok) {
+        const data =
+            await response.json();
 
-                console.warn(
-                    "Order status was not updated."
-                );
 
-            }
+        if (!response.ok) {
 
-        }
-
-        catch (error) {
-
-            console.error(
-                "Status update error:",
-                error
+            throw new Error(
+                data.message ||
+                "Unable to submit order."
             );
 
         }
 
-    }
 
+        stopTimer();
 
-    /* Hide verification */
-
-    const submitModal =
-        document.getElementById(
-            "submitModal"
-        );
-
-
-    if (submitModal) {
 
         submitModal.classList.add(
             "hidden"
         );
 
-    }
-
-
-    /* Show success */
-
-    const successModal =
-        document.getElementById(
-            "successModal"
-        );
-
-
-    if (successModal) {
 
         successModal.classList.remove(
             "hidden"
         );
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert(
+            error.message ||
+            "Something went wrong."
+        );
+
+
+        finalSubmitBtn.disabled =
+            false;
+
+        finalSubmitBtn.textContent =
+            "SUBMIT →";
 
     }
 
 }
 
 
-/* =========================
-   SUCCESS DONE
-========================= */
+/* =========================================================
+   SUCCESS CLOSE
+========================================================= */
 
 function closeSuccess() {
 
-    const successModal =
-        document.getElementById(
-            "successModal"
-        );
-
-
-    if (successModal) {
-
-        successModal.classList.add(
-            "hidden"
-        );
-
-    }
+    successModal.classList.add(
+        "hidden"
+    );
 
 
     goHome();
@@ -771,326 +1019,103 @@ function closeSuccess() {
     setTimeout(
         function () {
 
-            showOfferPopup();
+            offerModal.classList.remove(
+                "hidden"
+            );
 
         },
-        300
+        350
     );
 
 }
 
 
-/* =========================
-   OFFER POPUP
-========================= */
-
-function showOfferPopup() {
-
-    const offerModal =
-        document.getElementById(
-            "offerModal"
-        );
-
-
-    if (offerModal) {
-
-        offerModal.classList.remove(
-            "hidden"
-        );
-
-    }
-
-}
-
-
-/* =========================
-   CLOSE OFFER
-========================= */
+/* =========================================================
+   OFFER CLOSE
+========================================================= */
 
 function closeOfferPopup() {
 
-    const offerModal =
-        document.getElementById(
-            "offerModal"
-        );
-
-
-    if (offerModal) {
-
-        offerModal.classList.add(
-            "hidden"
-        );
-
-    }
-
-}
-
-
-/* =========================
-   GO HOME
-========================= */
-
-function goHome() {
-
-    const collectionView =
-        document.getElementById(
-            "collectionView"
-        );
-
-
-    if (collectionView) {
-
-        collectionView.classList.add(
-            "hidden"
-        );
-
-    }
-
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-    });
-
-}
-
-
-/* =========================
-   SEARCH
-========================= */
-
-function searchItems() {
-
-    const searchInput =
-        document.getElementById(
-            "searchInput"
-        );
-
-
-    if (!searchInput) {
-        return;
-    }
-
-
-    const query =
-        searchInput.value
-            .trim()
-            .toLowerCase();
-
-
-    if (!query) {
-        return;
-    }
-
-
-    let results = [];
-
-
-    Object.values(collections)
-        .forEach(category => {
-
-            category.forEach(item => {
-
-                if (
-                    item[0]
-                        .toLowerCase()
-                        .includes(query)
-                ) {
-
-                    results.push(item);
-
-                }
-
-            });
-
-        });
-
-
-    const collectionView =
-        document.getElementById(
-            "collectionView"
-        );
-
-
-    const itemsGrid =
-        document.getElementById(
-            "itemsGrid"
-        );
-
-
-    const collectionTitle =
-        document.getElementById(
-            "collectionTitle"
-        );
-
-
-    if (!collectionView || !itemsGrid) {
-        return;
-    }
-
-
-    collectionView.classList.remove(
+    offerModal.classList.add(
         "hidden"
     );
 
-
-    if (collectionTitle) {
-
-        collectionTitle.textContent =
-            "Search Results";
-
-    }
+}
 
 
-    itemsGrid.innerHTML = "";
+/* =========================================================
+   CLOSE ALL MODALS
+========================================================= */
 
+function closeAllModals() {
 
-    if (results.length === 0) {
+    buyModal.classList.add(
+        "hidden"
+    );
 
-        itemsGrid.innerHTML = `
+    submitModal.classList.add(
+        "hidden"
+    );
 
-            <div class="no-results">
+    successModal.classList.add(
+        "hidden"
+    );
 
-                <h2>
-                    No items found
-                </h2>
+    offerModal.classList.add(
+        "hidden"
+    );
 
-                <p>
-                    Try another search.
-                </p>
-
-            </div>
-
-        `;
-
-        return;
-    }
-
-
-    results.forEach(item => {
-
-        const itemName = item[0];
-
-        const rarity = item[1];
-
-        const image = item[2];
-
-        const price = item[3];
-
-
-        const card =
-            document.createElement("div");
-
-
-        card.className =
-            "item-card";
-
-
-        card.innerHTML = `
-
-            <div class="item-image">
-
-                <img
-                    src="${image}"
-                    alt="${itemName}"
-                >
-
-            </div>
-
-
-            <div class="item-info">
-
-                <div class="item-rarity">
-                    ${rarity}
-                </div>
-
-
-                <h3>
-                    ${itemName}
-                </h3>
-
-
-                <div class="item-bottom">
-
-                    <strong>
-                        ${price}
-                    </strong>
-
-
-                    <button
-                        class="buy-btn"
-                        type="button"
-                    >
-                        BUY NOW
-                    </button>
-
-                </div>
-
-            </div>
-
-        `;
-
-
-        const buyButton =
-            card.querySelector(
-                ".buy-btn"
-            );
-
-
-        if (buyButton) {
-
-            buyButton.addEventListener(
-                "click",
-                function () {
-
-                    openBuyForm(
-                        itemName,
-                        price
-                    );
-
-                }
-            );
-
-        }
-
-
-        itemsGrid.appendChild(card);
-
-    });
-
-
-    collectionView.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
+    stopTimer();
 
 }
 
 
-/* =========================
-   SEARCH ENTER
-========================= */
-
-const searchInput =
-    document.getElementById(
-        "searchInput"
-    );
-
+/* =========================================================
+   SEARCH
+========================================================= */
 
 if (searchInput) {
 
     searchInput.addEventListener(
-        "keydown",
-        function (event) {
+        "input",
+        function () {
 
-            if (event.key === "Enter") {
+            const search =
+                this.value
+                    .trim()
+                    .toLowerCase();
 
-                searchItems();
 
-            }
+            const cards =
+                document.querySelectorAll(
+                    ".featured-card, .small-card"
+                );
+
+
+            cards.forEach(
+                function (card) {
+
+                    const text =
+                        card.textContent
+                            .toLowerCase();
+
+
+                    if (
+                        text.includes(search)
+                    ) {
+
+                        card.style.display =
+                            "";
+
+                    } else {
+
+                        card.style.display =
+                            "none";
+
+                    }
+
+                }
+            );
 
         }
     );
@@ -1098,72 +1123,63 @@ if (searchInput) {
 }
 
 
-/* =========================
+/* =========================================================
    MODAL BACKGROUND CLICK
-========================= */
+========================================================= */
 
-window.addEventListener(
-    "click",
-    function (event) {
+[buyModal, submitModal, successModal, offerModal]
+    .forEach(
+        function (modal) {
 
-        const buyModal =
-            document.getElementById(
-                "buyModal"
+            if (!modal) {
+                return;
+            }
+
+
+            modal.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        event.target === modal
+                    ) {
+
+                        if (
+                            modal === buyModal
+                        ) {
+
+                            closeBuyForm();
+
+                        }
+
+                        if (
+                            modal === submitModal
+                        ) {
+
+                            closeSubmitModal();
+
+                        }
+
+                        if (
+                            modal === offerModal
+                        ) {
+
+                            closeOfferPopup();
+
+                        }
+
+                    }
+
+                }
             );
 
-
-        const submitModal =
-            document.getElementById(
-                "submitModal"
-            );
-
-
-        const successModal =
-            document.getElementById(
-                "successModal"
-            );
-
-
-        const offerModal =
-            document.getElementById(
-                "offerModal"
-            );
-
-
-        if (event.target === buyModal) {
-
-            closeBuyForm();
-
         }
+    );
 
 
-        if (event.target === submitModal) {
-
-            closeSubmitModal();
-
-        }
-
-
-        if (event.target === successModal) {
-
-            closeSuccess();
-
-        }
-
-
-        if (event.target === offerModal) {
-
-            closeOfferPopup();
-
-        }
-
-    }
-);
-
-
-/* =========================
+/* =========================================================
    ESC KEY
-========================= */
+========================================================= */
 
 document.addEventListener(
     "keydown",
@@ -1174,20 +1190,57 @@ document.addEventListener(
         }
 
 
-        closeBuyForm();
+        if (
+            !buyModal.classList.contains(
+                "hidden"
+            )
+        ) {
 
-        closeSubmitModal();
+            closeBuyForm();
 
-        closeOfferPopup();
+        }
+
+
+        if (
+            !offerModal.classList.contains(
+                "hidden"
+            )
+        ) {
+
+            closeOfferPopup();
+
+        }
 
     }
 );
 
 
-/* =========================
-   PAGE READY
-========================= */
+/* =========================================================
+   INITIAL STATE
+========================================================= */
 
-console.log(
-    "FF Rare Vault script loaded."
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        collectionView.classList.add(
+            "hidden"
+        );
+
+        collectionsSection.classList.remove(
+            "hidden"
+        );
+
+        const hero =
+            document.querySelector(".hero");
+
+        if (hero) {
+
+            hero.classList.remove(
+                "hidden"
+            );
+
+        }
+
+    }
 );
