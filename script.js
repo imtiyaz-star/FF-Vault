@@ -913,3 +913,88 @@ document.addEventListener(
 
     }
 );
+
+/* =========================
+   DYNAMIC UPI PAYMENT QR
+========================= */
+
+const PAYMENT_UPI_ID = "yourupi@bank";
+const PAYMENT_NAME = "FF Rare Vault";
+
+let paymentItemName = "";
+let paymentAmountValue = 0;
+
+function openPayment(item, price) {
+
+    paymentItemName = item;
+
+    // ₹150 → 150
+    paymentAmountValue = Number(
+        String(price).replace(/[^\d.]/g, "")
+    );
+
+    if (!paymentAmountValue || paymentAmountValue <= 0) {
+        alert("Invalid payment amount.");
+        return;
+    }
+
+    document.getElementById("paymentItem").textContent =
+        paymentItemName;
+
+    document.getElementById("paymentAmount").textContent =
+        `₹${paymentAmountValue}`;
+
+    const qrContainer = document.getElementById("paymentQR");
+
+    qrContainer.innerHTML = "";
+
+    /*
+       UPI payment request
+
+       am = selected item's exact amount
+       cu = Indian Rupee
+    */
+
+    const upiLink =
+        `upi://pay?pa=${encodeURIComponent(PAYMENT_UPI_ID)}` +
+        `&pn=${encodeURIComponent(PAYMENT_NAME)}` +
+        `&am=${encodeURIComponent(paymentAmountValue.toFixed(2))}` +
+        `&cu=INR`;
+
+    new QRCode(qrContainer, {
+        text: upiLink,
+        width: 210,
+        height: 210,
+        correctLevel: QRCode.CorrectLevel.H
+    });
+
+    document
+        .getElementById("paymentModal")
+        .classList.remove("hidden");
+}
+
+function closePayment() {
+    document
+        .getElementById("paymentModal")
+        .classList.add("hidden");
+}
+
+function continueAfterPayment() {
+
+    closePayment();
+
+    /*
+       Continue to your existing verification step.
+    */
+
+    const submitModal =
+        document.getElementById("submitModal");
+
+    if (submitModal) {
+        submitModal.classList.remove("hidden");
+
+        if (typeof startCountdown === "function") {
+            startCountdown();
+        }
+    }
+}
