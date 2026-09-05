@@ -2019,3 +2019,161 @@ footer p {
         scroll-behavior: auto !important;
     }
 }
+
+/* =========================
+   CHECKOUT MODAL
+========================= */
+
+.checkout-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 5500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, .85);
+    backdrop-filter: blur(10px);
+}
+
+.checkout-box {
+    position: relative;
+
+    width: min(460px, 100%);
+
+    padding: 32px;
+
+    border: 1px solid #333;
+    border-radius: 18px;
+
+    background: #141414;
+
+    box-shadow:
+        0 0 20px rgba(255,216,61,.15),
+        0 30px 100px rgba(0,0,0,.8);
+
+    animation: modalIn .3s ease;
+}
+
+.close-checkout {
+    position: absolute;
+
+    top: 12px;
+    right: 16px;
+
+    border: 0;
+
+    background: transparent;
+    color: #999;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.close-checkout:hover {
+    color: #fff;
+}
+
+.checkout-label {
+    color: #ffd83d;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.checkout-box h2 {
+    margin: 8px 0 25px;
+
+    font-size: 27px;
+}
+
+.checkout-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #292929;
+
+    color: #aaa;
+}
+
+.checkout-row strong {
+    color: #fff;
+    text-align: right;
+}
+
+.checkout-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 20px;
+    padding: 18px;
+
+    border: 1px solid rgba(255,216,61,.35);
+    border-radius: 12px;
+
+    background: rgba(255,216,61,.06);
+}
+
+.checkout-total span {
+    color: #ffd83d;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.checkout-total strong {
+    color: #ffd83d;
+
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.locked-price {
+    margin-top: 15px;
+
+    color: #888;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+.checkout-btn {
+    width: 100%;
+
+    margin-top: 22px;
+    padding: 15px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: #ffd83d;
+    color: #111;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+}
+
+.checkout-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 15px rgba(255,216,61,.6),
+        0 0 35px rgba(255,216,61,.25);
+}
