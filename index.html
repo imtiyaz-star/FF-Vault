@@ -474,6 +474,84 @@
 
 </div>
 
+    <!-- CHECKOUT / ORDER SUMMARY MODAL -->
+
+<div id="checkoutModal" class="checkout-modal hidden">
+
+    <div class="checkout-box">
+
+        <button
+            class="close-checkout"
+            onclick="closeCheckout()"
+        >
+            ×
+        </button>
+
+        <div class="checkout-label">
+            ORDER SUMMARY
+        </div>
+
+        <h2>
+            Review Your Order
+        </h2>
+
+
+        <div class="checkout-row">
+
+            <span>
+                Selected Item
+            </span>
+
+            <strong id="checkoutItem">
+                ---
+            </strong>
+
+        </div>
+
+
+        <div class="checkout-row">
+
+            <span>
+                Price
+            </span>
+
+            <strong id="checkoutPrice">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <div class="checkout-total">
+
+            <span>
+                FINAL TOTAL
+            </span>
+
+            <strong id="checkoutTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <div class="locked-price">
+
+            🔒 Price locked for this order
+
+        </div>
+
+
+        <button
+            class="checkout-btn"
+            onclick="continueCheckout()"
+        >
+            CONTINUE →
+        </button>
+
+    </div>
+
+</div>
 
 <!-- VERIFICATION / SUBMIT MODAL -->
 
